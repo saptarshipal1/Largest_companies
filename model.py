@@ -34,7 +34,7 @@ X_train, X_test, y_train, y_test = preprocess(df)
 
 def model(X_train, X_test, y_train, y_test):
     
-    model = Lasso(random_state=123)
+    model = GradientBoostingRegressor()
     model.fit(X_train,y_test)
     pred = model.predict(X_test)
     
